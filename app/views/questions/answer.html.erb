@@ -1,21 +1,13 @@
 <div class="container">
-  <h1 class="title">Stupid Not Stupid Coaching</h1>
+  <h1>Donkey Kushal</h1>
 
-  <div class="card">
-    <p class=""><%= @answer %></p>
-    <p class="you"><%= "- You" %></p>
+  <div>
+    <p><%= params[:question] %></p>
+    <p>You</p>
   </div>
 
-    <div class="card">
-    <% if params[:question].downcase == "I am doing the challenge now!" %>
-      <p><%= "" %></p>
-    <% elsif params[:question].end_with?("?") %>
-      <p><%= "Stupid question, be prepared and do your challenge!" %></p>
-    <% else %>
-      <p><%= "I don't care, be prepared and do your challenge!" %></p>
-    <% end %>
-
-    <p class="you"><%= "- Your tutor" %></p>
+    <p>Your tutor</p>
+    <%=@answer%>
   </div>
-  <a href=""><%= link_to "Ask your tutor a new question", ask_path %></a>
+  <a href=""><%= link_to "Ask a new question", ask_path %></a>
 </div>
